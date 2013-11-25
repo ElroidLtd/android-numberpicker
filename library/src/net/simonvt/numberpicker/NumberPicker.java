@@ -1641,6 +1641,23 @@ public class NumberPicker extends LinearLayout {
     }
 
     /**
+     * Change value to will animate if new value is +-1
+     * @param value the value to change to
+     */
+    public void changeValueTo(int value){
+        // Animate the value
+       if (value==mValue+1){
+            changeValueByOne(true);
+       }
+       else if (value==mValue-1){
+           changeValueByOne(false);
+       }
+       else{
+           setValue(value);
+       }
+    }
+
+    /**
      * Changes the current value by one which is increment or
      * decrement based on the passes argument.
      * decrement the current value.
