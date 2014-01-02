@@ -1146,6 +1146,10 @@ public class NumberPicker extends LinearLayout {
         updateInputTextView();
     }
 
+    public Formatter getFormatter() {
+        return mFormatter;
+    }
+
     /**
      * Set the current value for the number picker.
      * <p>
@@ -1840,7 +1844,7 @@ public class NumberPicker extends LinearLayout {
      *
      * @return Whether the text was updated.
      */
-    private boolean updateInputTextView() {
+    public boolean updateInputTextView() {
         /*
          * If we don't have displayed values then use the current number else
          * find the correct value in the displayed values for the current
